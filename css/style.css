@@ -1,0 +1,502 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General */
+
+*{
+    margin:0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /* Fonts */
+    --titlefont:"Gloria Hallelujah", serif;
+    --textfont:"Noto Sans", serif;
+    --footerfont:"Roboto", serif;
+    /* colors */
+    --red:#cc3900;
+    --pink:#fbbbcd;
+}
+h2{
+    font-family: var(--titlefont);
+    font-size: 45px;
+}
+h3{
+    font-family: var(--titlefont);
+    font-size: 28px;
+}
+h4{
+    font-family: var(--titlefont);
+    font-size: 25px;
+    text-align: center;
+}
+h5{
+    font-family: var(--textfont);
+    font-size: 14px;
+    padding: 20px 0;
+}
+p,
+a,
+ul{
+    font-family: var(--textfont);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    list-style: none;
+    color: black;
+}
+img{
+    width: 100%;
+}
+
+.btn{
+    display: block;
+    width: fit-content;
+    background-color: #fff;
+    padding: 8px 12px ;
+    border: 1px solid var(--pink);
+    font-weight: 600;
+}
+.btn:hover{
+    background-color: var(--pink);
+}
+i{
+    color: var(--red);
+    font-size: x-large;
+}
+
+/* Header */
+header{
+    max-width: 1440px;
+    margin: auto;
+}
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    max-width: 1440px;
+}
+header nav ul{
+    gap: 20px;
+    display: flex;
+    font-weight: 600;
+}
+header nav ul li:nth-child(1) a{
+    color: var(--red);
+} 
+header img{
+    width: 180px;
+}
+#burgermenu{
+    display: none;
+}
+
+/* Section 1 : Bienvenue */
+#bienvenue article div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--red);
+    font-family: var(--textfont);
+    text-transform: uppercase;
+}
+#bienvenue{
+    background-image: url(../img/favicon.png);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 300px;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 400px;
+    margin: auto;
+    padding: 0 15px;
+    max-width: 1440px;
+}
+#bienvenue img{
+    width: 350px;
+}
+#bienvenue hr{
+    width: 50px;
+    background-color: var(--red);
+    height: 1px;
+    margin: 10px;
+}
+#bienvenue p{
+    margin: 30px 0;
+}
+#bienvenue a{
+    border: 1px solid var(--pink);
+}
+
+/* Section 2: A propos */
+
+#apropos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 100px 0;
+}
+#apropos #article1{
+    background-color: var(--pink);
+    padding: 50px 160px;
+}
+#apropos img{
+    object-fit: cover;
+    /* height: 200px; */
+}
+#apropos h2{
+    margin-bottom: 60px;
+}
+#apropos #article1 p:nth-child(2),
+#apropos #article1 p:nth-child(3){
+    margin-bottom: 20px;
+}
+#apropos #article1 p{
+    font-size: 18px;
+}
+#apropos div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+#apropos #article2{
+    padding: 15px;
+}
+#apropos #article2 img:nth-child(1),
+#apropos #article2 img:nth-child(2),
+#apropos #article2 img:nth-child(3),
+#apropos #article2 img:nth-child(4){
+    height: 400px;
+}
+/* #apropos #article2 img:nth-child(5){
+grid-column: 1 / 3;
+width: 450px;
+height: 400px;
+} */
+#apropos #article2 p{
+    text-decoration: underline;
+}
+
+/* Section 3 : Oeuvres */
+
+#oeuvres{
+    max-width: 1440px;
+    margin: auto;
+}
+#oeuvres>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#oeuvres a{
+    border: 1px solid var(--pink);
+}
+#oeuvres div:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+#oeuvres img{
+    margin: auto;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Section 4 : Artistes */
+
+#artistes{
+    margin: auto;
+    background-color: #F7F7F7;
+    padding-bottom: 100px;
+}
+#artistes h2{
+    text-align: center;
+    margin-top: 200px;
+}
+#artistes img{
+    height: 300px;
+    object-fit: cover;
+    margin: auto;
+}
+#artistes #div1,
+#artistes #div2{
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-top: 100px;
+}
+#artistes article>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#artistes a.btn{
+    border: 1px solid var(--pink);
+}
+#artistes p{
+    padding: 20px 0;
+}
+
+/* Section 5 : Actualités */
+
+#actualités{
+    max-width: 1440px;
+    margin: auto;
+    padding: 100px 0;
+}
+#actualités div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+#actualités a{
+    font-weight: 600;
+}
+    
+#actualités div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    align-items: baseline;
+}
+#actualités img{
+    object-fit: cover;
+}
+/* #actualités>a:nth-child(3){
+    margin-top: 40px;
+} */
+
+
+/* Section 6 : Contact */
+
+#contact{
+    background-color: var(--red);
+    padding: 100px 0;
+}
+#contact div{
+    max-width: 780px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+#contact p{
+    color: white;
+    margin: 50px;
+    font-size: 18px;
+}
+#contact a{
+    background-color: var(--red);
+    color: #fff;
+    border: 1px solid white;
+    margin: auto;
+}
+#contact a:hover{
+    background-color: white;
+    color: var(--red);
+}
+
+/* Footer */
+
+footer{
+    max-width: 1440px;
+    margin: auto;
+}
+footer img{
+    width: 180px;
+    margin: 10px 0;
+}
+footer #div1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1440px;
+    gap: 10px;
+}
+footer nav ul{
+    gap: 20px;
+    display: flex;
+    font-weight: 600;
+}
+footer nav ul li:nth-child(1) a{
+    color: var(--red);
+}
+footer>div{
+    text-align: center;
+}
+footer>div p{
+    margin-top: 20px;
+}
+
+/* Menu responsive index */
+/* Responsive TABLETTE */
+
+@media screen and (max-width:1024px) {
+#bienvenue {
+    padding: 0 30px;
+    height: 700px;
+    display: flow;
+}
+#bienvenue img {
+    margin: 30px 0;
+}
+#burgermenu{
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    padding: 10px;
+}
+header nav ul li,
+footer nav ul li{
+    display: none;  
+}
+#apropos {
+    grid-template-columns: 1fr;
+}
+#oeuvres{
+    padding: 10px;
+}
+#oeuvres div:nth-child(2) {
+    grid-template-columns: 1fr;
+}
+#oeuvres img{
+    width: 100%
+}
+#artistes{
+    padding: 10px;
+}
+#artistes h2 {
+    margin-top: 50px;
+}
+#artistes #div1,
+#artistes #div2{
+    gap: 5px;
+}
+#artistes article>div {
+    display: flex;
+    justify-content: space-around;
+}
+#actualités {
+    padding: 10px;
+    margin-top: 50px;
+}
+}
+
+/* Responsive TELEPHONE */
+@media screen and (max-width:767px){
+header #icones{
+    display: none;
+}
+h2{
+    font-size: 30px;
+}
+#bienvenue img{
+    width: 100%;
+}
+#apropos #article1 {
+    padding: 10px;
+}
+#artistes #div1, 
+#artistes #div2,
+#actualités div:nth-child(2) {
+    grid-template-columns: 1fr;
+}
+#contact{
+    padding: 10px;
+}
+footer #icones{
+    display: none;
+}
+footer{
+    font-size: 8px;
+}
+}
+
+/* Page contact */
+#pagecontact header nav ul li:nth-child(1) a,
+#pagecontact footer nav ul li:nth-child(1) a{
+    color: black;
+}
+
+#pagecontact header nav ul li:nth-child(6) a,
+#pagecontact footer nav ul li:nth-child(6) a{
+    color: var(--red);
+}
+
+#pagecontact main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1440px;
+    margin: auto;
+    padding: 50px;
+}
+#pagecontact main p{
+    margin-bottom: 40px;
+}
+#pagecontact main #coordonées p{
+    font-family: var(--titlefont);
+    font-size: 20px;
+}
+#pagecontact main #article2{
+    margin: 50px;
+    /* padding: 50px; */
+    background-image: url(../img/favicon.png);
+    background-repeat: no-repeat;
+    /* height: 500px; */
+}
+input, textarea{
+    font-family: var(--textfont);
+    line-height: 20px;
+    border: 1px solid #818A91;
+    padding: 5px;
+}
+#article2>div{
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+#pagecontact #Envoyer{
+    font-size: 16px;
+    font-weight: 500;
+    padding:12px 270px;
+    font-family: var(--textfont);
+    color: white;
+    background-color: var(--pink);
+    border:1px solid var(--white-color);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+#pagecontact #Envoyer:hover{
+    background-color: white;
+    color: var(--pink);
+    border:1px solid #818A91;
+}
+/* Menu responsive contact */
+/* Responsive TABLETTE */
+
+@media screen and (max-width:1024px) {
+#pagecontact main {
+    grid-template-columns: 1fr;
+    }
+#pagecontact main p {
+    max-width: 320px;    
+}
+}
+/* Responsive TELEPHONE */
+
+@media screen and (max-width:767px){
+
+#pagecontact main #article2{
+    display: block;
+    grid-column: 1 / 3;
+    margin: 0;
+    background: none;
+}
+#pagecontact #Envoyer {
+    padding: 12px 70px;
+}
+}
