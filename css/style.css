@@ -48,7 +48,10 @@ ul{
 img{
     width: 100%;
 }
-
+i{
+    color: var(--red);
+    font-size: x-large;
+}
 .btn{
     display: block;
     width: fit-content;
@@ -60,60 +63,58 @@ img{
 .btn:hover{
     background-color: var(--pink);
 }
-i{
+.container-1440{
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 10px;
+}
+.active{
     color: var(--red);
-    font-size: x-large;
 }
 
 /* Header */
-header{
-    max-width: 1440px;
-    margin: auto;
-}
 header div{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    max-width: 1440px;
 }
 header nav ul{
     gap: 20px;
     display: flex;
     font-weight: 600;
+    padding-left: 0;
 }
-header nav ul li:nth-child(1) a{
-    color: var(--red);
-} 
 header img{
     width: 180px;
 }
 #burgermenu{
     display: none;
 }
-
 /* Section 1 : Bienvenue */
-#bienvenue article div{
+#bienvenue article>div{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50px 1fr;
     color: var(--red);
     font-family: var(--textfont);
     text-transform: uppercase;
+    gap: 30px;
 }
 #bienvenue{
-    background-image: url(../img/favicon.png);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 300px;
+    background: url(../img/favicon.png);
     background-repeat: no-repeat;
     background-position: right;
-    height: 400px;
-    margin: auto;
-    padding: 0 15px;
-    max-width: 1440px;
+    margin-top: 100px;
+    background-position-x: 101%;
+}
+#bienvenue>div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 400px;
 }
 #bienvenue img{
-    width: 350px;
+    width: 70%;
+    justify-self: right;
 }
 #bienvenue hr{
     width: 50px;
@@ -133,15 +134,11 @@ header img{
 #apropos{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 100px 0;
+    padding: 100px 0;
 }
 #apropos #article1{
     background-color: var(--pink);
-    padding: 50px 160px;
-}
-#apropos img{
-    object-fit: cover;
-    /* height: 200px; */
+    padding: 100px;
 }
 #apropos h2{
     margin-bottom: 60px;
@@ -153,25 +150,24 @@ header img{
 #apropos #article1 p{
     font-size: 18px;
 }
-#apropos div{
+ #apropos #article2{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    gap:15px;
+    padding:15px;
 }
-#apropos #article2{
-    padding: 15px;
+#apropos img{
+    object-fit: cover;
+    height: 400px; 
+    width: 100%;
+    object-fit: cover;
 }
-#apropos #article2 img:nth-child(1),
-#apropos #article2 img:nth-child(2),
-#apropos #article2 img:nth-child(3),
-#apropos #article2 img:nth-child(4){
-    height: 400px;
+#apropos #article2 img:nth-child(5){
+    grid-column: 1/3;
 }
-/* #apropos #article2 img:nth-child(5){
-grid-column: 1 / 3;
-width: 450px;
-height: 400px;
-} */
+#apropos #article2 img:nth-child(6){
+    grid-column: 3/5;
+}
 #apropos #article2 p{
     text-decoration: underline;
 }
@@ -208,11 +204,11 @@ height: 400px;
 #artistes{
     margin: auto;
     background-color: #F7F7F7;
-    padding-bottom: 100px;
+    padding: 100px 0;
 }
 #artistes h2{
     text-align: center;
-    margin-top: 200px;
+
 }
 #artistes img{
     height: 300px;
@@ -221,12 +217,10 @@ height: 400px;
 }
 #artistes #div1,
 #artistes #div2{
-    max-width: 1440px;
-    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 #artistes article>div{
     display: flex;
@@ -266,11 +260,9 @@ height: 400px;
 #actualités img{
     object-fit: cover;
 }
-/* #actualités>a:nth-child(3){
-    margin-top: 40px;
-} */
-
-
+#actualités p{
+    height: 100px;
+}
 /* Section 6 : Contact */
 
 #contact{
@@ -284,9 +276,9 @@ height: 400px;
     color: white;
 }
 #contact p{
-    color: white;
     margin: 50px;
     font-size: 18px;
+    color: white;
 }
 #contact a{
     background-color: var(--red);
@@ -301,10 +293,6 @@ height: 400px;
 
 /* Footer */
 
-footer{
-    max-width: 1440px;
-    margin: auto;
-}
 footer img{
     width: 180px;
     margin: 10px 0;
@@ -313,17 +301,16 @@ footer #div1{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    max-width: 1440px;
-    gap: 10px;
 }
 footer nav ul{
     gap: 20px;
     display: flex;
     font-weight: 600;
+    padding: 0;
 }
-footer nav ul li:nth-child(1) a{
+/* footer nav ul li:nth-child(1) a{
     color: var(--red);
-}
+} */
 footer>div{
     text-align: center;
 }
@@ -384,6 +371,7 @@ footer nav ul li{
     margin-top: 50px;
 }
 }
+/* footer flex direction :colun */
 
 /* Responsive TELEPHONE */
 @media screen and (max-width:767px){
@@ -453,13 +441,14 @@ input, textarea{
     border: 1px solid #818A91;
     padding: 5px;
 }
+/* mettre le font sur le form avec un grid + padding et margin bottom */
 #article2>div{
     display: grid;
     gap: 10px;
     padding: 10px;
     font-size: 18px;
 }
-#pagecontact #Envoyer{
+#pagecontact input[type=Submit] {
     font-size: 16px;
     font-weight: 500;
     padding:12px 270px;
@@ -470,7 +459,8 @@ input, textarea{
     transition: all 0.2s ease;
     cursor: pointer;
 }
-#pagecontact #Envoyer:hover{
+
+#pagecontact input[type=Submit]:hover{
     background-color: white;
     color: var(--pink);
     border:1px solid #818A91;
@@ -482,9 +472,9 @@ input, textarea{
 #pagecontact main {
     grid-template-columns: 1fr;
     }
-#pagecontact main p {
-    max-width: 320px;    
-}
+/* #pagecontact main p {
+    max-width: 320px;    widt 100% ??
+} */
 }
 /* Responsive TELEPHONE */
 
